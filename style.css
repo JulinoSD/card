@@ -153,6 +153,13 @@ section.container {
     border: 1px solid var(--clr-primary-1);
     margin: 2rem;
     filter: drop-shadow(0 0 1px var(--clr-primary-5));
+   transition: 1s;
+}
+.sample:hover{
+  filter: drop-shadow(0 0 1px var(--clr-green-dark));
+}
+.sample:active{
+  filter: drop-shadow(0 0 1px var(--clr-red-dark));
 }
 .sample img{
     width: 100%;
@@ -210,11 +217,14 @@ section.container {
 details summary {
     color: var(--clr-grey-7);
 }
-details > p {
-    margin-right: 2rem;
+.exmplo-3 .text-info{
+  display: flex;
+  flex-direction: row;
+  place-items: start;
+  place-content: space-between;
+  width: 100%;
 }
-@media screen and (max-width: 782px){
-    details > p {
-        margin-right: 0.3rem;
-    }
+.exmplo-3 .info {
+  flex-direction: column;
+  gap: 0.3rem;
 }
