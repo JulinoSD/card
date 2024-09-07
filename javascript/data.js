@@ -1,8 +1,17 @@
 import fetchApi from "./api.js"
 
 
-const data = await fetchApi()
-const {drinks} = data
-console.log("Imprimindo os dados a partir de data-frame", drinks[0])
+const {results} = await fetchApi()
+
+console.log("Imprimindo os dados a partir de data-frame", results)
+
+const data = async () => {
+    const {results} = await fetchApi()
+    const person = results.map(({id, name, biography, powerstats})=>{
+        console.log(name, id, biography, powerstats)
+    })
+    const newPerson = person
+}
+data()
 
 export default data

@@ -1,6 +1,9 @@
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+import token from "../envy.js"
+
+const URL = `https://superheroapi.com/api.php/${token}/search/batman`
+
 const fetchApi = async ()=>{
-    const response = await fetch(url)
+    const response = await fetch(URL)
     const data = await response.json()
     return data
 }
